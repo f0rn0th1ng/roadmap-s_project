@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Roadmap's fifth Project</title>
+</head>
+<body>
+    <div class="biggest_container">
+    <div class="container">
+    <div class="card1">
+        <div class="text_part">
+            <div class="text">
+            <p class="des1">I have been solving all the project ideas on roadmap.sh and I am surprised how far
+                I have come from where I started.
+            </p>
+            <p class="sth_more1">Highly recommended!</p>
+        </div>
+        </div>
+        <div class="card1_container">
+        <img src="image.png" alt="Artem Jones" class="pic_type1">
+        <h1 class="name">Artem Jones<br><span class="position">Junior Frontend developer</span></h1>
+        </div>
+    </div>
+
+    <div class="card2">
+        <div class="text_part2">
+            <div class="text2">
+            <p class="des2">Since staring my career in 2021, I have only followed on resource, roadmap.sh, it truly helped me go from
+                0 to having a job and changing the financial trajectory of my family.
+            </p>
+        </div>
+        </div>
+        <div class="card1_container">
+            <img src="image.png" alt="Artem Jones" class="pic_type1">
+            <h1 class="name">Artem Jones<br><span class="position">Junior Frontend developer</span></h1>
+            </div>
+        
+        </div>
+    </div>
+
+    <div class="second_container">
+        <img src="image.png" alt="head" class="touxiang">
+        <div class="woman_container">
+            <img src="copy.png" alt="jackie_mackle" class="jackie_mackle">
+            <h1 class="special_name">jackie_Mackle</h1>
+            <p class="special_position">Engineering Mananger</p>
+            <p class="des3">
+                I find myself recommending roadmap.sh to all the internees or junior developers. It's a great
+                way to skill up and grow in your career.
+            </p>
+        </div>
+    </div>
+    
+    <div class="more_comment">
+        <p class="comment" id="comment-text">roadmap.sh is an incredible resource. I was fortunate to discover it
+            during my university days in 2018. Back then, it was just a single repository with three images.
+            It's amazing to see how much impact it has had on millions of lives since then.
+        </p>
+        
+        <div class="avatar-container">
+            <button id="prev-btn">&lt;</button>
+            <img src="image.png" alt="Previous User" class="avatar small-avatar" id="prev-avatar">
+            <img src="image.png" alt="Current User" class="avatar main-avatar" id="current-avatar">
+            <img src="image.png" alt="Next User" class="avatar small-avatar" id="next-avatar">
+            <button id="next-btn">&gt;</button>
+        </div>
+        <p class="head_name" id="comment-name">Artem Jones</p>
+        
+        
+    </div>
+
+    
+</div>
+
+<!-- HTML 内容 -->
+<p class="comment" id="comment-text">roadmap.sh is an incredible resource...</p>
+
+<!-- JavaScript 部分 -->
+<script>
+    const comments = [
+        {
+            img: "image.png",
+            name: "Artem Jones",
+            comment: "Roadmap.sh has been an incredible resource throughout my journey!"
+        },
+        {
+            img: "person2.png",
+            name: "Jackie Mackle",
+            comment: "I recommend roadmap.sh to all interns and juniors as a way to skill up."
+        },
+        {
+            img: "image.png",
+            name: "Sarah Smith",
+            comment: "Found roadmap.sh back in university; it's amazing to see its growth!"
+        }
+    ];
+
+    let currentIndex = 0;
+
+    const prevAvatar = document.getElementById('prev-avatar');
+    const currentAvatar = document.getElementById('current-avatar');
+    const nextAvatar = document.getElementById('next-avatar');
+    const commentName = document.getElementById('comment-name');
+    const commentText = document.getElementById('comment-text'); // 获取评价文本元素
+
+    function updateAvatars(index) {
+        const prevIndex = (index - 1 + comments.length) % comments.length;
+        const nextIndex = (index + 1) % comments.length;
+
+        prevAvatar.src = comments[prevIndex].img;
+        currentAvatar.src = comments[index].img;
+        nextAvatar.src = comments[nextIndex].img;
+
+        commentName.textContent = comments[index].name;
+        commentText.textContent = comments[index].comment; // 更新评价内容
+    }
+
+    document.getElementById('prev-btn').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + comments.length) % comments.length;
+        updateAvatars(currentIndex);
+    });
+
+    document.getElementById('next-btn').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % comments.length;
+        updateAvatars(currentIndex);
+    });
+
+    // 初始化头像和评价内容
+    updateAvatars(currentIndex);
+</script>
+
+</body>
+</html>

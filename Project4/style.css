@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    
+}
+
+.container {
+    
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid black;
+    border-radius: 30px;
+}
+.Changelog{
+    text-align: center;
+}
+.des{
+    text-align: center;
+    opacity: 0.7;
+}
+
+.change_detail {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.change_detail li{
+    display: flex;
+    
+    align-items: center;
+    margin: 30px;
+    position: relative;
+}
+
+
+
+.bottom {
+    display: flex; /* 确保元素为块级 */
+    border: 2px solid black;
+    background-color: black;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    width: 300px; /* 按需设定宽度 */
+    height: 50px;
+    margin: 20px auto; /* 水平居中 */
+}
+
+.container ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 250px; /* 确保黑线位于内容中间 */
+    width: 2px;
+    height: 100%;
+    background-color: #333;
+  }
+
+  .container li::before {
+    content: '';
+    position: absolute;
+    left: 216px; /* 与黑线对齐 */
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+  }
+  
+.date{
+    width: 200px; /* 固定宽度 */    
+    text-align: right;
+    opacity: 0.5;
+  }
+  
+  .content{
+    text-align: left;
+    margin-left: 50px;
+    font-weight: bold;
+  }

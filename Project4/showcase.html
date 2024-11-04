@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Changelog Timeline</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .timeline {
+      width: 400px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .timeline h2 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .timeline p {
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .timeline ul {
+      list-style-type: none;
+      padding: 0;
+      position: relative;
+    }
+
+    .timeline li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    /* 左侧日期 */
+    .date {
+      color: #888;
+      font-size: 12px;
+      width: 100px;
+      text-align: right;
+      margin-right: 10px;
+    }
+
+    /* 中间黑线和黑点 */
+    .timeline ul::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 125px; /* 确保黑线位于内容中间 */
+      width: 2px;
+      height: 100%;
+      background-color: #333;
+    }
+
+    .timeline li::before {
+      content: '';
+      position: absolute;
+      left: 121px; /* 与黑线对齐 */
+      width: 10px;
+      height: 10px;
+      background-color: #333;
+      border-radius: 50%;
+    }
+
+    /* 右侧内容 */
+    .content {
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+      margin-left: 10px;
+      flex: 1;
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .button a {
+      text-decoration: none;
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="timeline">
+    <h2>Changelog</h2>
+    <p>Here's everything we have shipped in the past few days</p>
+    <ul>
+      <li>
+        <div class="date">September 3, 2024</div>
+        <div class="content">Announcing Projects on Frontend Roadmap</div>
+      </li>
+      <li>
+        <div class="date">August 28, 2024</div>
+        <div class="content">Build your learning habits with learning streaks</div>
+      </li>
+      <li>
+        <div class="date">August 25, 2024</div>
+        <div class="content">Git and GitHub Roadmap</div>
+      </li>
+      <li>
+        <div class="date">August 22, 2024</div>
+        <div class="content">Submit your project solution and get feedback</div>
+      </li>
+      <li>
+        <div class="date">August 15, 2024</div>
+        <div class="content">Backend Project Ideas</div>
+      </li>
+      <li>
+        <div class="date">August 10, 2024</div>
+        <div class="content">Redis roadmap</div>
+      </li>
+      <li>
+        <div class="date">August 1, 2024</div>
+        <div class="content">Changelog page to help you stay in the loop</div>
+      </li>
+    </ul>
+    <div class="button">
+      <a href="#">Visit Complete Changelog</a>
+    </div>
+  </div>
+</body>
+</html>

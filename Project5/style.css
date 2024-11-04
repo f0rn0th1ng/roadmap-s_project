@@ -1,0 +1,183 @@
+.biggest_container{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+     width: 800px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex; /* 使用 flexbox 布局 */
+    flex-direction: column; /* 内容垂直排列 */
+    align-items: center; /* 水平方向居中 */
+    
+    min-height: 90vh; /* 使容器至少占据整个视窗高度 */
+}
+
+.pic_type1{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.card1_container{
+    
+    display: flex;
+    gap: 10px;
+}
+
+.name{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.position{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.des1{
+    font-weight: bold;
+}
+
+.sth_more1{
+    font-weight: bold;
+}
+
+.text_part{
+    border: 1px solid black;
+    width: 300px;
+    text-align: left;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.text_part::after {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* 箭头位置 */
+    left: 25px; /* 调整箭头的水平位置 */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid black; /* 与背景颜色相同 */
+}
+
+.text{
+    transform: translateX(10px);
+    
+}
+
+.card2{
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+}
+
+.container {
+    display: flex;
+    gap: 50px; /* 控制卡片之间的水平间距 */
+}
+
+.second_container{
+    margin-top:40px;
+    display: flex;
+    gap: 20px;
+    
+}
+
+.woman_container{
+    border: 3px solid black;
+    box-sizing: border-box;
+    padding: 20px;
+    justify-content: left;
+    border-radius: 20px;
+    width: 440px;
+    height: 270px;
+    background-color: black;
+    color: white;
+    
+}
+
+.jackie_mackle{
+    margin-bottom: -10px;
+}
+
+.special_position{
+    
+    color: white;
+    opacity: 0.5;
+}
+
+.touxiang{
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+}
+
+.different_head{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.more_comment{
+    margin-top: 20px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 20px;
+    height: 300px;
+    width: 800px;
+    text-align: center ;
+    padding-top: 30px;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.comment{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.avatar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+}
+
+.main-avatar {
+    width: 60px;
+    height: 60px;
+    opacity: 1;
+}
+
+.small-avatar {
+    opacity: 0.5;
+}
+
+.head_name {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}

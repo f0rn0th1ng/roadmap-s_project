@@ -1,0 +1,76 @@
+body {
+    display: flex; /* 将 body 设置为 flex 容器 */
+    flex-direction: column; /* 设置子元素按列（垂直）排列 */
+    align-items: center; /* 水平方向居中对齐 */
+    min-height: 100vh; /* 设置最小高度为视口高度，确保页面垂直方向占满 */
+    position:relative;
+    top: 100px;
+}
+
+.date_info{
+    display: flex;
+    border: 1px solid black;
+    width: 300px;
+    height: 60px;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 20px;
+    gap: 80px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.today{
+    font-size: 20px;
+}
+
+.divider {
+    position: absolute;
+    left: 75%;
+    height: 60px; 
+    width: 2px; 
+    background-color: black; 
+    color: black;
+}
+
+.logo{
+    position: absolute;
+    left: 80%;
+      width: 50px;
+      height: 50px;
+}
+
+.detail_date {
+    border: 2px solid black;
+    width: 300px;
+    display: flex; 
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.month_and_year {
+    justify-content: center;
+    display: flex; 
+    gap: 40px; 
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7列，每列宽度相等 */
+    gap: 0;
+    text-align: center;
+}
+
+.day-name {
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.day {
+    padding: 15px 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}

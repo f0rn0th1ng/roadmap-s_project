@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    font-family: "Fredoka", sans-serif;
+}
+
+body{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    border: 2px solid black;
+    width: 400px;
+    height: 200px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-left: 15px;
+    transform: translateX(10px);
+    position: relative;
+    background-color: aquamarine;
+}
+
+#input{
+    width: 360px;
+    box-sizing: border-box;
+    border-radius:20px ;
+    height: 175px;
+    text-align: left;
+    padding: 10px;
+    resize: none;           /* 禁用用户调整文本框大小（可选） */
+    overflow: auto;         /* 确保超出内容时可以滚动 */
+}
+
+#count{
+    position: absolute;
+    right: 35px;
+    bottom: 15px;
+    font-size: 15px;
+}

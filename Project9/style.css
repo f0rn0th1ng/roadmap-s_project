@@ -1,0 +1,67 @@
+body{
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+.container{
+    position: absolute;
+    right:5%;
+    top: 5%;
+    border: 2px solid black;
+    width: 400px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    display:flex;
+    gap: 30px;
+}
+
+
+.nav_items{
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+
+.nav_items::after {
+    content: attr(data-tip); /* 使用自定义属性存储提示信息 */
+    position: absolute;
+    bottom: 150%; /* 调整提示框的位置 */
+    left: 50%;
+    transform: translateX(-50%); /* 居中,校正 */
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0; /* 初始隐藏 */
+    pointer-events: none; 
+    transition: opacity 0.3s ease-in-out;
+}
+.nav_items:hover::after{
+ opacity: 1;   
+}
+
+.nav_items::before {
+    content: "";
+    position: absolute;
+    bottom: 80%; /* 调整箭头的位置 */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.nav_items:hover::before {
+    opacity: 1;
+}
