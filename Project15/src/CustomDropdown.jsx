@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState,useRef } from 'react';
 import './CustomDropdown.css';
 
 function CustomDropdown({ options, onSelect }) {
@@ -34,15 +34,13 @@ function CustomDropdown({ options, onSelect }) {
             <a className="option_content"
             onClick={dropdownopen}>{selectedOption}
             </a>
-            {isOpen&&
-                (<nav>
+                <nav id="navbar" className={isOpen ? 'open' : ''}>
                     {options.map((option,index)=>(
-                        <a key={index} className='option_list' onMouseEnter={()=>handleoptionclick(option)}>
+                        <a key={index} className='option_list' onClick={()=>handleoptionclick(option)}>
                         {option}
                         </a>
                     ))}
                 </nav>
-            )}
         </div>
         </>
     );
