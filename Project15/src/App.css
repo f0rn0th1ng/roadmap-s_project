@@ -1,0 +1,12 @@
+.whole_container{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 300px;
+    height: 400px;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 20px;
+}
+
+
